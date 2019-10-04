@@ -1,0 +1,35 @@
+Question 3.E
+
+a) $ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 530 bytes | 530.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/sawwas99/assignment2.git
+   e2378ab..b4ec1e6  master -> master
+
+b) There has been 8 commits on this repository so far, done with command git log
+
+c) The last time .gitignore was modified was Wed Sep 25 18:13:30 2019 -0400
+The command I used to find this information was git log -1 --format="%ad" .gitignore
+
+d) Branches are used in a Git repository to 1) Avoid messing with code in the main line, as Branches
+are independent lines of development, they are abstractions to the process of editting and committing a file. A brand new working directory to code in. 2) Branches allow multiple people to work in simultaneous versions of the same code. Programmer A could be working on a variation of a website design while Programmer B could be attempting to fix bugs or update new content.
+
+e) git log- shows a list of the commits made so far in the repo and the commit messages with them
+While git status- shows the changes in files that have not been added to a commit yet, and files that have not been committed to the repo yet.
+
+f) git log --follow Vehicle.h
+
+g) git log --all --grep='file'
+
+h) in OOP I) Inheritence is a mechanism where you can derive a class from another class, to create a set of classes that share the same attributes and methods. One class can acquire the properties/traits of another class, this facilitates reusability. 
+II) Polymorphism is the ability for one name to have many different forms, meaning a language's ability to process objects differently depending on their data type or class. The ability to redefine methods for derived classes, i.e Method overloading. 
+III) Encapsulation is the process of bundling data members and methods/functions into one unit. Used to hide internal representation of objects from the outside view. Implementation details hidden from user.
+
+i) The difference in the two workflows is that in integration manager, each developer makes their own push and changes to their own public repository while pulling from the central repository, and integration conflict is resolved by the integration manager. In the dictator lieutenant workflow everyone pulls from the central repository but only the dictator can push to it. Merges are done in the lieutenant repositories and conflicts are also solved there. Developers push changes to their assigned lieutenant's repository.
+
+j) In a team of 100 developers there is bound to be some kind of push, merge, or other conflicts. These conflicts would occur much more frequently and at larger scales if all work is shared in a central repository under a centralized workflow. However under a Dictators and Lieutenants model, the repositories are broken down into several different systems where lieutenants can watch over and manage any conflicts that occur. This means that the central repository (managed by the dictator) is kept clean from many conflicts, while smaller teams led by the lieutenants can clean up their code in their respective repositories.
