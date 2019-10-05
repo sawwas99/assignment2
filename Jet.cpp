@@ -3,37 +3,38 @@
 
 #include "Jet.h"
 #include <cstdlib>
+#include <string>
 
-
-Jet:Jet() {	
+Jet::Jet() {	
 	numberOfEngines = 1;
 	setBrand("Custom");
 	setModel("Boeing 380");
 }
 
-Jet::Jet(string brand, string model, string fuelType, int engineCount) {
+Jet::Jet(string brand, string model, string fuelType, string engineCount) {
 	setBrand(brand);
 	setModel(model);
 	setFuelType(fuelType);
-	setEngines(engineCount);
+	setEngineCount(engineCount);
 }
 
 Jet::~Jet()= default;
 
 int Jet::getEngineCount(){
-	return engineCount;
+	return numberOfEngines;
 }
 
-void Jet::setEngineCount(int engineCount){
-	numberOfEngines = engineCount;
+void Jet::setEngineCount(string engineCount){
+	int num = stoi(engineCount);
+	numberOfEngines = num;
 }
 
 double Jet::mileageEstimate(double time){
 	int rand();
 	int temp = 40 + (rand() % (100-40 + 1));
 	double mileage = temp * time;
-	if(engineCount > 2 && fuelType = "Rocket")
-		mileage += mileage * (myEngineCount* 0.055);
+	if( (numberOfEngines > 2) && (fuelType == "Rocket"))
+			mileage += mileage * (numberOfEngines* 0.055);
 	return mileage;
 
 }

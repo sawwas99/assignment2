@@ -10,11 +10,11 @@ private:
 
 public:
 	Jet();
-	explicit Jet(string brand, string model, string fuelType, int engineCount);
+	explicit Jet(string brand, string model, string fuelType, string engineCount);
 	virtual ~Jet();
 	int getEngineCount();
-	void setEngineCount(int engineCount);
-	virtual double mileagueEstimate(double time);
+	void setEngineCount(string engineCount);
+	virtual double mileageEstimate(double time);
 
 	virtual string toString();
 };
