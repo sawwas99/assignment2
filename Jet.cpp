@@ -6,9 +6,9 @@
 #include <string>
 
 Jet::Jet() {	
-	numberOfEngines = 1;
+	numberOfEngines = 1; //default one engine
 	setBrand("Custom");
-	setModel("Boeing 380");
+	setModel("Boeing 380");  //base model
 }
 
 Jet::Jet(string brand, string model, string fuelType, string engineCount) {
@@ -25,16 +25,16 @@ int Jet::getEngineCount(){
 }
 
 void Jet::setEngineCount(string engineCount){
-	int num = stoi(engineCount);
+	int num = stoi(engineCount);  //convert string to int
 	numberOfEngines = num;
 }
 
 double Jet::mileageEstimate(double time){
 	int rand();
-	int temp = 40 + (rand() % (100-40 + 1));
+	int temp = 40 + (rand() % (100-40 + 1)); //random number from 40-100
 	double mileage = temp * time;
-	if( (numberOfEngines > 2) && (fuelType == "Rocket"))
-			mileage += mileage * (numberOfEngines* 0.055);
+	if( (numberOfEngines > 2) && (fuelType == "Rocket")) //if engines > 3 and fueltype = Rocket
+			mileage += mileage * (numberOfEngines* 0.055); //multiply by 5.5% per a engine
 	return mileage;
 
 }
