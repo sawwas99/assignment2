@@ -15,5 +15,4 @@ public:
 };
 
 
-#endif //DRIVINGSIMULATOR_BICYCLE_H
 
